@@ -14,7 +14,7 @@ public class Stone {
 		// Variable that registers the throw
 		boolean enter = false;
 		// Check if the stone has been thrown in the axes dimensions
-		if (x >= 0 || x <= dimensions && y >= 0 || y <= dimensions) {
+		if (x >= 0 && x < dimensions && y >= 0 && y < dimensions) {
 			// Changes the variable to true
 			enter = true;
 		}
