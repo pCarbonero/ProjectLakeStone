@@ -10,7 +10,7 @@ public class Stone {
 	 * @param dimensions Max dimension of axes
 	 * @return Returns if the stone can be thrown or not
 	 */
-	private static boolean correctPosition(int x, int y, int dimensions) {
+	private static boolean isValidCell(int x, int y, int dimensions) {
 		// Variable that registers the throw
 		boolean enter = false;
 		// Check if the stone has been thrown in the axes dimensions
