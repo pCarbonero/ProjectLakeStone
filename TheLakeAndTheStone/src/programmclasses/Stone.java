@@ -4,7 +4,7 @@ public class Stone {
 	// tamaño tablero
 	final int SIZE = 8;
 	// array para el lago
-	int[][] lago = new int[SIZE][SIZE];
+	int[][] lake = new int[SIZE][SIZE];
 	// posición en X
 	int posX = 0;
 	// posición en Y
@@ -44,16 +44,16 @@ public class Stone {
 				int newY = posY - i;
 				int newX = posX + j;
 				//if the cell is valid the wave is added vertically to the board 
-				if (isValidCell(newY, newX, lago.length)) {
-					lago[newY][newX] = Math.max(intensity - i, lago[newY][newX]);
+				if (isValidCell(newY, newX, lake.length)) {
+					lake[newY][newX] = Math.max(intensity - i, lake[newY][newX]);
 				}
 				
 				//adds i to the Y axis 
 				newY = posY + i;
 				
 				//if the cell is valid the wave is added diagonally to the board
-				if (isValidCell(newY, newX, lago.length)) {
-					lago[newY][newX] = Math.max(intensity - i, lago[newY][newX]);
+				if (isValidCell(newY, newX, lake.length)) {
+					lake[newY][newX] = Math.max(intensity - i, lake[newY][newX]);
 				}
 				
 				//adds j to the Y axis
@@ -62,21 +62,21 @@ public class Stone {
 				newX = posX - i;
 				
 				//if the cell is valid the wave is added horizontally to the board
-				if (isValidCell(newY, newX, lago.length)) {
-					lago[newY][newX] = Math.max(intensity - i, lago[newY][newX]);
+				if (isValidCell(newY, newX, lake.length)) {
+					lake[newY][newX] = Math.max(intensity - i, lake[newY][newX]);
 				}
 				
 				//adds i to the x axis
 				newX = posX + i;
 				
 				//if the cell is valid the wave is added to the other diagonal to the board
-				if (isValidCell(newY, newX, lago.length)) {
-					lago[newY][newX] = Math.max(intensity - i, lago[newY][newX]);
+				if (isValidCell(newY, newX, lake.length)) {
+					lake[newY][newX] = Math.max(intensity - i, lake[newY][newX]);
 				}
 			}
 		}
 		//it changes the value of the intensity where the stone was thrown
-		lago[posY][posX] = intensity;
+		lake[posY][posX] = intensity;
 		
 	}// method
 
