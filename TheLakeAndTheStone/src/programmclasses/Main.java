@@ -12,17 +12,20 @@ public class Main {
 		// We call to Scanner's function and we create a object of it
 		Scanner scan = new Scanner(System.in);
 		
-		// Variable which save the name of the user
+		// Variable that saves the name of the user
 		String name = "";
 		
-		// Variable which save the intensity of the stone
+		// Variable that saves the intensity of the stone
 		int intensity = 0;
 		
-		//Variable which save the position in X
+		//Variable that saves the position in X
 		int posX = 0;
 
-		//Variable which save the position in Y
+		//Variable that saves the position in Y
 		int posY = 0;
+		
+		Stone s = new Stone();
+		
 		
 		// Print a message of welcome to game
 		System.out.println("Welcome to 'The Lake And The Stone'");
@@ -31,6 +34,11 @@ public class Main {
 		System.out.println("What's your name?");
 		// Scan and save the user's name
 		name = scan.nextLine();
+		
+		
+		
+		//Print tab
+		s.paintLake();
 		
 		//We ask the position two position to the user
 		System.out.println("Position in X: ");
@@ -41,7 +49,6 @@ public class Main {
 		// We ask to the user the intensity
 		System.out.println("Intensity: ");
 		intensity = scan.nextInt();
-		
 		stone = new Stone(posX, posY, intensity);
 		
 		stone.lakeWaves();

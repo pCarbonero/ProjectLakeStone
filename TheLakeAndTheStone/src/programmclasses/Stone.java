@@ -1,24 +1,36 @@
 package programmclasses;
 
+/**
+ * Class that contains all the properties 
+ */
 public class Stone {
-	// tamaño tablero
+	
+	/**
+	 * Tab size
+	 */
 	final int SIZE = 8;
-	// array para el lago
+	/**
+	 *  Array that makes the board 
+	 */
 	int[][] lake = new int[SIZE][SIZE];
-	// posición en X
+	/**
+	 *  x pos
+	 */
 	int posX = 0;
-	// posición en Y
+	/**
+	 *  y pos
+	 */
 	int posY = 0;
-	// intensidad
+	/**
+	 * Intensity
+	 */
 	int intensity;
 
 	/**
 	 * Method that paint the lake with the waves 
 	 */
 	public void paintLake() {
-		//
 		for (int i = 0; i < lake.length; i++) {
-			//
 			for (int j = 0; j < lake[i].length; j++) {
 				System.out.print(lake[i][j] + " ");
 			}
