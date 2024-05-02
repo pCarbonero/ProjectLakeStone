@@ -46,7 +46,7 @@ public class Stone {
 	 * @param dimensions Max dimension of axes
 	 * @return Returns if the stone can be thrown or not
 	 */
-	private static boolean isValidCell(int x, int y, int dimensions) {
+	private boolean isValidCell(int x, int y, int dimensions) {
 		// Variable that registers the throw
 		boolean enter = false;
 		// Check if the stone has been thrown in the axes dimensions
@@ -122,7 +122,11 @@ public class Stone {
 			}
 		}
 		//it changes the value of the intensity where the stone was thrown
-		lake[posY][posX] = intensity;
+		if (isValidCell(posX, posY, lake.length)) {
+			lake[posY][posX] = intensity;
+		}
+		else System.out.println("NOOOOOO");
+		
 		
 	}// method
 }
