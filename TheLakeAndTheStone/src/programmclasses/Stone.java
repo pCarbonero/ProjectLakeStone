@@ -8,7 +8,7 @@ public class Stone {
 	/**
 	 * Tab size
 	 */
-	final int SIZE = 8;
+	static final int SIZE = 8;
 	/**
 	 *  Array that makes the board 
 	 */

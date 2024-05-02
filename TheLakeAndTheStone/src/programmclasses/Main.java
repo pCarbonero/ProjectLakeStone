@@ -35,16 +35,19 @@ public class Main {
 		// Scan and save the user's name
 		name = scan.nextLine();
 		
-		
-		
 		//Print tab
 		s.paintLake();
 		
 		//We ask the position two position to the user
+		do {
 		System.out.println("Position in X: ");
 		posX = scan.nextInt();
-		System.out.println("Position in Y: ");
-		posY = scan.nextInt();
+		}while(posX > Stone.SIZE-1);
+		
+		do {
+			System.out.println("Position in Y: ");
+			posY = scan.nextInt();
+		}while(posY > Stone.SIZE-1);
 		
 		// We ask to the user the intensity
 		System.out.println("Intensity: ");
